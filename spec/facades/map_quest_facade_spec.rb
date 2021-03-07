@@ -4,7 +4,7 @@ describe MapQuestFacade do
   describe 'class methods' do
     it '.get_coords' do
       json_response = File.read('spec/fixtures/mapquest_search.json')
-      stub_request(:get, "http://www.mapquestapi.com/geocoding/v1/address?key=77q0NrAHnIZb2b5TMhYt3zI7cldGCoRC&location=Denver,CO").with(
+      stub_request(:get, "http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['MAPQUEST_API_KEY']}&location=Denver,CO").with(
       headers: {
         'Accept'=>'*/*',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
