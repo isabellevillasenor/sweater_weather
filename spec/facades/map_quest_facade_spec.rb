@@ -15,6 +15,7 @@ describe MapQuestFacade do
       response = MapQuestFacade.get_coords('Denver,CO')
 
       expect(response).to be_a Hash
+      expect(response.count).to eq(2)
 
       expect(response[:lat]).to be_a Float
       expect(response[:lat]).to eq(39.738453)
