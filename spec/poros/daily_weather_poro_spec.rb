@@ -5,7 +5,7 @@ describe CurrentWeather do
     json_response = File.read('spec/fixtures/openweather_forecast.json')
     result = JSON.parse(json_response, symbolize_names: true)
 
-    daily_weather = DailyWeather.new(result)
+    daily_weather = DailyWeather.new(result[:daily][0])
 
     expect(daily_weather.date).to eq('2021-03-07')
     expect(daily_weather.sunrise).to eq('2021-03-07 13:23:38 UTC')
