@@ -16,7 +16,7 @@ describe OpenWeatherService do
       response = OpenWeatherService.get_weather(39.738453, -104.984853)
 
       expect(response).to be_a Hash
-      expect(response.count).to eq(7)
+      expect(response.count).to eq(8)
 
       expect(response[:lat]).to be_a Float
       expect(response[:lat]).to eq(39.7385)
