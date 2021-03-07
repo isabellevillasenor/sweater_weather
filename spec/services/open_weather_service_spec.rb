@@ -4,12 +4,12 @@ describe OpenWeatherService do
   describe 'class methods' do
     it '.get_weather' do
       json_response = File.read('spec/fixtures/openweather_forecast.json')
-      stub_request(:get, "http://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['OPEN_WEATHER_API_KEY']}&lat=39.738453&lon=-104.984853").
+      stub_request(:get, "http://api.openweathermap.org/data/2.5/onecall?appid=2d39d6d4253ea35c67fdf1d6b563a7d5&lat=39.738453&lon=-104.984853&units=imperial").
       with(
         headers: {
-       'Accept'=>'*/*',
-       'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-       'User-Agent'=>'Faraday v1.3.0'
+      'Accept'=>'*/*',
+      'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+      'User-Agent'=>'Faraday v1.3.0'
         }).
       to_return(status: 200, body: json_response, headers: {})
       
