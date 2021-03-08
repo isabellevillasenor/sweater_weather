@@ -39,6 +39,8 @@ describe MapQuestService do
       expect(response.count).to eq(2)
 
       expect(response[:route][:formattedTime]).to eq('01:44:22')
+      expect(response[:route][:locations][0][:adminArea5]).to eq('Denver')
+      expect(response[:route][:locations][1][:adminArea5]).to eq('Pueblo')
     end
   end
 end
