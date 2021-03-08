@@ -6,15 +6,10 @@ class MapQuestService
       JSON.parse(response.body, symbolize_names: true)
     end
 
-  #   private
-
-  #   def conn
-  #     conn = Faraday.new('http://www.mapquestapi.com')
-  #   end
-
-  #   def to_json(url)
-  #     response = conn.get(url)
-  #     JSON.parse(response.body, symbolize_names: true)
-  #   end
+    def travel_time(start, destination)
+      conn = Faraday.new("http://open.mapquestapi.com/directions/v2/route?from=#{start}&key=#{ENV['MAPQUEST_API_KEY']}&to=#{destination}")
+      response = conn.get
+      JSON.parse(response.body, symbolize_names: true)
+    end
   end
 end
