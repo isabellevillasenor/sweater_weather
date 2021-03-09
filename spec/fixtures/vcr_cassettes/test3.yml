@@ -1,0 +1,491 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://open.mapquestapi.com/directions/v2/route?from=params_start&key=77q0NrAHnIZb2b5TMhYt3zI7cldGCoRC&to=params_end
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 09 Mar 2021 18:27:08 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '3836'
+      Connection:
+      - keep-alive
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - JSESSIONID=AB36DC2F1A199543241FCC25088158BD; Path=/directions; HttpOnly
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Last-Modified:
+      - Tue, 09 Mar 2021 18:27:08 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Status:
+      - success
+      Transactionweight:
+      - '1'
+    body:
+      encoding: ASCII-8BIT
+      string: '{
+  "route": {
+      "hasTollRoad": false,
+      "hasBridge": true,
+      "boundingBox": {
+          "lr": {
+              "lng": -105.939568,
+              "lat": 35.076927
+          },
+          "ul": {
+              "lng": -106.655563,
+              "lat": 35.692215
+          }
+      },
+      "distance": 64.084,
+      "hasTimedRestriction": false,
+      "hasTunnel": false,
+      "hasHighway": true,
+      "computedWaypoints": [],
+      "routeError": {
+          "errorCode": -400,
+          "message": ""
+      },
+      "formattedTime": "01:01:06",
+      "sessionId": "60479b70-0050-5f21-02b4-330d-029a7e411d8b",
+      "hasAccessRestriction": false,
+      "realTime": 3891,
+      "hasSeasonalClosure": false,
+      "hasCountryCross": false,
+      "fuelUsed": 3.37,
+      "legs": [
+          {
+              "hasTollRoad": false,
+              "hasBridge": true,
+              "destNarrative": "Proceed to 900 BARELAS RD SW.",
+              "distance": 64.084,
+              "hasTimedRestriction": false,
+              "hasTunnel": false,
+              "hasHighway": true,
+              "index": 0,
+              "formattedTime": "01:01:06",
+              "origIndex": 1,
+              "hasAccessRestriction": false,
+              "hasSeasonalClosure": false,
+              "hasCountryCross": false,
+              "roadGradeStrategy": [
+                  []
+              ],
+              "destIndex": 5,
+              "time": 3666,
+              "hasUnpaved": false,
+              "origNarrative": "Go west on Paseo de Peralta.",
+              "maneuvers": [
+                  {
+                      "distance": 0.006,
+                      "streets": [
+                          "Grant Ave"
+                      ],
+                      "narrative": "Start out going north on Grant Ave toward Paseo de Peralta.",
+                      "turnType": 0,
+                      "startPoint": {
+                          "lng": -105.93959,
+                          "lat": 35.692135
+                      },
+                      "index": 0,
+                      "formattedTime": "00:00:01",
+                      "directionName": "North",
+                      "maneuverNotes": [],
+                      "linkIds": [],
+                      "signs": [],
+                      "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=77q0NrAHnIZb2b5TMhYt3zI7cldGCoRC&size=225,160&locations=35.692134857177734,-105.93959045410156|marker-1||35.69221496582031,-105.93956756591797|marker-2||&center=35.69217491149902,-105.93957901000977&defaultMarker=none&zoom=15&rand=-634959202&session=60479b70-0050-5f21-02b4-330d-029a7e411d8b",
+                      "transportMode": "AUTO",
+                      "attributes": 0,
+                      "time": 1,
+                      "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/icon-dirs-start_sm.gif",
+                      "direction": 1
+                  },
+                  {
+                      "distance": 0.863,
+                      "streets": [
+                          "Paseo de Peralta"
+                      ],
+                      "narrative": "Turn left onto Paseo de Peralta.",
+                      "turnType": 6,
+                      "startPoint": {
+                          "lng": -105.939568,
+                          "lat": 35.692215
+                      },
+                      "index": 1,
+                      "formattedTime": "00:02:08",
+                      "directionName": "West",
+                      "maneuverNotes": [],
+                      "linkIds": [],
+                      "signs": [],
+                      "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=77q0NrAHnIZb2b5TMhYt3zI7cldGCoRC&size=225,160&locations=35.69221496582031,-105.93956756591797|marker-2||35.69072723388672,-105.9542007446289|marker-3||&center=35.691471099853516,-105.94688415527344&defaultMarker=none&zoom=10&rand=-634959202&session=60479b70-0050-5f21-02b4-330d-029a7e411d8b",
+                      "transportMode": "AUTO",
+                      "attributes": 0,
+                      "time": 128,
+                      "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                      "direction": 7
+                  },
+                  {
+                      "distance": 3.623,
+                      "streets": [
+                          "N Saint Francis Dr",
+                          "US-84 S",
+                          "US-285 S"
+                      ],
+                      "narrative": "Turn left onto N Saint Francis Dr/US-84 S/US-285 S.",
+                      "turnType": 6,
+                      "startPoint": {
+                          "lng": -105.954201,
+                          "lat": 35.690727
+                      },
+                      "index": 2,
+                      "formattedTime": "00:05:51",
+                      "directionName": "South",
+                      "maneuverNotes": [],
+                      "linkIds": [],
+                      "signs": [
+                          {
+                              "extraText": "",
+                              "text": "84",
+                              "type": 2,
+                              "url": "http://icons.mqcdn.com/icons/rs2.png?n=84&d=SOUTH",
+                              "direction": 4
+                          },
+                          {
+                              "extraText": "",
+                              "text": "285",
+                              "type": 2,
+                              "url": "http://icons.mqcdn.com/icons/rs2.png?n=285&d=SOUTH",
+                              "direction": 4
+                          }
+                      ],
+                      "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=77q0NrAHnIZb2b5TMhYt3zI7cldGCoRC&size=225,160&locations=35.69072723388672,-105.9542007446289|marker-3||35.638694763183594,-105.95651245117188|marker-4||&center=35.664710998535156,-105.95535659790039&defaultMarker=none&zoom=7&rand=-634959202&session=60479b70-0050-5f21-02b4-330d-029a7e411d8b",
+                      "transportMode": "AUTO",
+                      "attributes": 1024,
+                      "time": 351,
+                      "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                      "direction": 4
+                  },
+                  {
+                      "distance": 57.974,
+                      "streets": [
+                          "I-25 S",
+                          "US-85 S"
+                      ],
+                      "narrative": "Merge onto I-25 S/US-85 S toward Albuquerque.",
+                      "turnType": 10,
+                      "startPoint": {
+                          "lng": -105.956512,
+                          "lat": 35.638695
+                      },
+                      "index": 3,
+                      "formattedTime": "00:48:58",
+                      "directionName": "South",
+                      "maneuverNotes": [],
+                      "linkIds": [],
+                      "signs": [
+                          {
+                              "extraText": "",
+                              "text": "25",
+                              "type": 1,
+                              "url": "http://icons.mqcdn.com/icons/rs1.png?n=25&d=SOUTH",
+                              "direction": 4
+                          },
+                          {
+                              "extraText": "",
+                              "text": "85",
+                              "type": 2,
+                              "url": "http://icons.mqcdn.com/icons/rs2.png?n=85&d=SOUTH",
+                              "direction": 4
+                          }
+                      ],
+                      "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=77q0NrAHnIZb2b5TMhYt3zI7cldGCoRC&size=225,160&locations=35.638694763183594,-105.95651245117188|marker-4||35.084381103515625,-106.63641357421875|marker-5||&center=35.36153793334961,-106.29646301269531&defaultMarker=none&zoom=4&rand=-634959202&session=60479b70-0050-5f21-02b4-330d-029a7e411d8b",
+                      "transportMode": "AUTO",
+                      "attributes": 1152,
+                      "time": 2938,
+                      "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_right_sm.gif",
+                      "direction": 4
+                  },
+                  {
+                      "distance": 0.333,
+                      "streets": [],
+                      "narrative": "Take the Lead AVE exit, EXIT 224A, toward Coal AVE.",
+                      "turnType": 14,
+                      "startPoint": {
+                          "lng": -106.636414,
+                          "lat": 35.084381
+                      },
+                      "index": 4,
+                      "formattedTime": "00:00:33",
+                      "directionName": "South",
+                      "maneuverNotes": [],
+                      "linkIds": [],
+                      "signs": [
+                          {
+                              "extraText": "",
+                              "text": "224A",
+                              "type": 1001,
+                              "url": "http://icons.mqcdn.com/icons/rs1001.png?n=224A&d=RIGHT",
+                              "direction": 0
+                          }
+                      ],
+                      "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=77q0NrAHnIZb2b5TMhYt3zI7cldGCoRC&size=225,160&locations=35.084381103515625,-106.63641357421875|marker-5||35.07975769042969,-106.63797760009766|marker-6||&center=35.082069396972656,-106.6371955871582&defaultMarker=none&zoom=11&rand=-634959202&session=60479b70-0050-5f21-02b4-330d-029a7e411d8b",
+                      "transportMode": "AUTO",
+                      "attributes": 1024,
+                      "time": 33,
+                      "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_gr_exitright_sm.gif",
+                      "direction": 4
+                  },
+                  {
+                      "distance": 0.814,
+                      "streets": [
+                          "Lead Ave"
+                      ],
+                      "narrative": "Turn right onto Lead Ave.",
+                      "turnType": 2,
+                      "startPoint": {
+                          "lng": -106.637978,
+                          "lat": 35.079758
+                      },
+                      "index": 5,
+                      "formattedTime": "00:02:06",
+                      "directionName": "West",
+                      "maneuverNotes": [],
+                      "linkIds": [],
+                      "signs": [],
+                      "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=77q0NrAHnIZb2b5TMhYt3zI7cldGCoRC&size=225,160&locations=35.07975769042969,-106.63797760009766|marker-6||35.08161544799805,-106.65216827392578|marker-7||&center=35.08068656921387,-106.64507293701172&defaultMarker=none&zoom=11&rand=-634959202&session=60479b70-0050-5f21-02b4-330d-029a7e411d8b",
+                      "transportMode": "AUTO",
+                      "attributes": 1024,
+                      "time": 126,
+                      "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                      "direction": 7
+                  },
+                  {
+                      "distance": 0.327,
+                      "streets": [
+                          "4th St"
+                      ],
+                      "narrative": "Turn left onto 4th St.",
+                      "turnType": 6,
+                      "startPoint": {
+                          "lng": -106.652168,
+                          "lat": 35.081615
+                      },
+                      "index": 6,
+                      "formattedTime": "00:00:47",
+                      "directionName": "South",
+                      "maneuverNotes": [],
+                      "linkIds": [],
+                      "signs": [],
+                      "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=77q0NrAHnIZb2b5TMhYt3zI7cldGCoRC&size=225,160&locations=35.08161544799805,-106.65216827392578|marker-7||35.076927185058594,-106.65306854248047|marker-8||&center=35.07927131652832,-106.65261840820312&defaultMarker=none&zoom=11&rand=-634959202&session=60479b70-0050-5f21-02b4-330d-029a7e411d8b",
+                      "transportMode": "AUTO",
+                      "attributes": 0,
+                      "time": 47,
+                      "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                      "direction": 4
+                  },
+                  {
+                      "distance": 0.143,
+                      "streets": [
+                          "Atlantic Ave"
+                      ],
+                      "narrative": "Turn right onto Atlantic Ave.",
+                      "turnType": 2,
+                      "startPoint": {
+                          "lng": -106.653069,
+                          "lat": 35.076927
+                      },
+                      "index": 7,
+                      "formattedTime": "00:00:42",
+                      "directionName": "West",
+                      "maneuverNotes": [],
+                      "linkIds": [],
+                      "signs": [],
+                      "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=77q0NrAHnIZb2b5TMhYt3zI7cldGCoRC&size=225,160&locations=35.076927185058594,-106.65306854248047|marker-8||35.07719421386719,-106.65555572509766|marker-9||&center=35.07706069946289,-106.65431213378906&defaultMarker=none&zoom=13&rand=-634959202&session=60479b70-0050-5f21-02b4-330d-029a7e411d8b",
+                      "transportMode": "AUTO",
+                      "attributes": 0,
+                      "time": 42,
+                      "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                      "direction": 7
+                  },
+                  {
+                      "distance": 0.001,
+                      "streets": [
+                          "Barelas Rd"
+                      ],
+                      "narrative": "Turn left onto Barelas Rd.",
+                      "turnType": 6,
+                      "startPoint": {
+                          "lng": -106.655556,
+                          "lat": 35.077194
+                      },
+                      "index": 8,
+                      "formattedTime": "00:00:00",
+                      "directionName": "Southwest",
+                      "maneuverNotes": [],
+                      "linkIds": [],
+                      "signs": [],
+                      "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=77q0NrAHnIZb2b5TMhYt3zI7cldGCoRC&size=225,160&locations=35.07719421386719,-106.65555572509766|marker-9||35.07718276977539,-106.65556335449219|marker-10||&center=35.07718849182129,-106.65555953979492&defaultMarker=none&zoom=15&rand=-634959202&session=60479b70-0050-5f21-02b4-330d-029a7e411d8b",
+                      "transportMode": "AUTO",
+                      "attributes": 0,
+                      "time": 0,
+                      "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                      "direction": 6
+                  },
+                  {
+                      "distance": 0,
+                      "streets": [],
+                      "narrative": "900 BARELAS RD SW is on the left.",
+                      "turnType": -1,
+                      "startPoint": {
+                          "lng": -106.655563,
+                          "lat": 35.077183
+                      },
+                      "index": 9,
+                      "formattedTime": "00:00:00",
+                      "directionName": "",
+                      "maneuverNotes": [],
+                      "linkIds": [],
+                      "signs": [],
+                      "transportMode": "AUTO",
+                      "attributes": 0,
+                      "time": 0,
+                      "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/icon-dirs-end_sm.gif",
+                      "direction": 0
+                  }
+              ],
+              "hasFerry": false
+          }
+      ],
+      "options": {
+          "arteryWeights": [],
+          "cyclingRoadFactor": 1,
+          "timeType": 0,
+          "useTraffic": false,
+          "returnLinkDirections": false,
+          "countryBoundaryDisplay": true,
+          "enhancedNarrative": false,
+          "locale": "en_US",
+          "tryAvoidLinkIds": [],
+          "drivingStyle": 2,
+          "doReverseGeocode": true,
+          "generalize": -1,
+          "mustAvoidLinkIds": [],
+          "sideOfStreetDisplay": true,
+          "routeType": "FASTEST",
+          "avoidTimedConditions": false,
+          "routeNumber": 0,
+          "shapeFormat": "raw",
+          "maxWalkingDistance": -1,
+          "destinationManeuverDisplay": true,
+          "transferPenalty": -1,
+          "narrativeType": "text",
+          "walkingSpeed": -1,
+          "urbanAvoidFactor": -1,
+          "stateBoundaryDisplay": true,
+          "unit": "M",
+          "highwayEfficiency": 22,
+          "maxLinkId": 0,
+          "maneuverPenalty": -1,
+          "avoidTripIds": [],
+          "filterZoneFactor": -1,
+          "manmaps": "true"
+      },
+      "locations": [
+          {
+              "dragPoint": false,
+              "displayLatLng": {
+                  "lng": -105.93959,
+                  "lat": 35.692135
+              },
+              "adminArea4": "Santa Fe County",
+              "adminArea5": "Santa Fe",
+              "postalCode": "",
+              "adminArea1": "US",
+              "adminArea3": "NM",
+              "type": "s",
+              "sideOfStreet": "N",
+              "geocodeQualityCode": "A5XAX",
+              "adminArea4Type": "County",
+              "linkId": 30242665,
+              "street": "",
+              "adminArea5Type": "City",
+              "geocodeQuality": "CITY",
+              "adminArea1Type": "Country",
+              "adminArea3Type": "State",
+              "latLng": {
+                  "lng": -105.939593,
+                  "lat": 35.692133
+              }
+          },
+          {
+              "dragPoint": false,
+              "displayLatLng": {
+                  "lng": -106.655556,
+                  "lat": 35.077243
+              },
+              "adminArea4": "Bernalillo",
+              "adminArea5": "Albuquerque",
+              "postalCode": "87102-4018",
+              "adminArea1": "US",
+              "adminArea3": "NM",
+              "type": "s",
+              "sideOfStreet": "L",
+              "geocodeQualityCode": "L1AAA",
+              "adminArea4Type": "County",
+              "linkId": 64619782,
+              "street": "900 Barelas Rd SW",
+              "adminArea5Type": "City",
+              "geocodeQuality": "ADDRESS",
+              "adminArea1Type": "Country",
+              "adminArea3Type": "State",
+              "latLng": {
+                  "lng": -106.655556,
+                  "lat": 35.077243
+              }
+          }
+      ],
+      "time": 3666,
+      "hasUnpaved": false,
+      "locationSequence": [
+          0,
+          1
+      ],
+      "hasFerry": false
+  },
+  "info": {
+      "statuscode": 0,
+      "copyright": {
+          "imageAltText": "© 2021 MapQuest, Inc.",
+          "imageUrl": "http://api.mqcdn.com/res/mqlogo.gif",
+          "text": "© 2021 MapQuest, Inc."
+      },
+      "messages": []
+  }
+}'
+  recorded_at: Tue, 09 Mar 2021 18:27:08 GMT
+recorded_with: VCR 6.0.0
