@@ -1,25 +1,28 @@
 class Api::V1::TrailsController < ApplicationController
   def show
-    binding.pry
+    #get the travel time
+    get_coords = MapQuestFacade.get_coords(params[:destination])
+    lat = get_coords[:lat].to_s
+    lng = get_coords[:lng].to_s
+    coords = lat + ',' + lng
+    travel_json = MapQuestFacade.travel_time(params[:start], coords)
+    @time = Time.at(travel_json[:route][:formattedTime].to_time).to_i
+
     #get the trails in city with required steps
     nmcity = params[:destination].capitalize
     conn = Faraday.new("https://prescriptiontrails.org")
     response = conn.get("/api/filter/?by=city&city=#{nmcity}&offset=0&count=3&steps=1000")
-    json1 = JSON.parse(response.body, symbolize_names: true)
-    
-    #get the travel time this should be in lat/lng for both sante fe and the destination = trail lat/lng
-    conn = Faraday.new("https://open.mapquestapi.com")
-    response = conn.get("/directions/v2/route?from=#{params[:start]}&key=#{ENV['MAPQUEST_API_KEY']}&to=#{json1[:trails][0][:lat]},#{json1[:trails][0][:lng]}")
-    json2 = JSON.parse(response.body, symbolize_names: true)
-    @time = Time.at(json2[:route][:formattedTime].to_time).to_i
+    trails = JSON.parse(response.body, symbolize_names: true)
 
-    #get the weather based off time of arrival
-    weather = OpenWeatherService.get_weather(json1[:trails][:lat], json1[:trails][:lng])
-    #return Trail PORO
-    destination_weather = TripForecast.new(weather, @time)
-    trail.add_forecast(destination_weather)
-    trail
-    #render serializer
-
+    trails[:trails][0..2].map do |trail|
+      x = trail[:loops]
+      if x[:'1'][:steps] > 1000
+        weather = OpenWeatherService.get_weather(trail[:lat], trail[:lng])
+        destination_weather = TrailForecast.new(weather, @time)
+        new_trail = Trail.new(trail)
+        new_trail.add_forecast(destination_weather)
+        render json: TrailSerializer.new(new_trail)
+      end
+    end
   end
 end

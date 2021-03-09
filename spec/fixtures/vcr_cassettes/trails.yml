@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://prescriptiontrails.org/api/filter/?by=city&city=Albuquerque&count=3&offset=0&steps=1000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 09 Mar 2021 16:56:50 GMT
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.6.40
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - sameorigin
+      Set-Cookie:
+      - PHPSESSID=89vvoackkkbpcolf61la23l7a1; path=/
+      X-Ua-Compatible:
+      - IE=Edge
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"trails":[{"id":1,"name":"Tingley Field","city":"Albuquerque","zip":87102,"crossstreets":"Coal
+        and 10th SW","address":"10 Atlantic Ave SW","transit":"ABQ Ride Stops:  #53,
+        #54","lat":"35.0772432","lng":"-106.6555564","desc":"This%20redeveloped%20park%20provides%20a%20catchment%20basin%20in%20monsoon%20season%2C%20and%20the%20new%20recreation%20facilities%20and%20walking%20trail%20are%20great%20for%20the%20whole%20family.","lighting":"On
+        trail and parking lot","difficulty":1,"surface":"6-foot+ wide sidewalk, 4-foot
+        wide gravel on 2 sides","parking":"On site","facilities":"Restrooms","hours":"6
+        a.m. - 10 p.m.","loopcount":1,"satImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450547549tingleyParkSat.png","largeImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1455036748P1130010.jpg","thumbURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/square_1455036748P1130010.jpg","attractions":["%3Ca%20href%3D%22https%3A%2F%2Fwww.cabq.gov%2Fculturalservices%2Fbiopark%2Fzoo%22%3EZoo%3C%2Fa%3E%20located%20across%2010th%20Street","Tennis%20courts%20across%208th%20street","Shaded%20playgrounds%20and%20picnic%20area","Grassy%20field","Softball%20fields"],"loops":{"1":{"name":"Main
+        Loop","distance":"0.6","steps":1267}},"published":"true","rating":3,"ratings":1,"favorites":0,"ModifiedTime":"2019-09-30
+        11:55:21","reviews":1,"url":"https:\/\/prescriptiontrails.org\/trail\/1\/tingley-field\/"},{"id":2,"name":"Tingley
+        Beach","city":"Albuquerque","zip":87104,"crossstreets":"Central Ave. & Tingley
+        Dr. SW","address":"1800 Tingley Drive SW","transit":"ABQ Ride Stops:  #66,
+        Rapid Ride","lat":"35.086244","lng":"-106.674171","desc":"Tingley%20Beach%20is%20on%20the%20Rio%20Grande%2C%20near%20downtown%20Albuquerque%2C%20next%20to%20the%20BIOPark%20%E2%80%93%20Zoo%20and%20Aquarium%20and%20offers%20fishing%2C%20hiking%2C%20model%20boat%20sailing%2C%20wildlife%20viewing%20and%20walking%20trails%20around%20three%20ponds.%20For%20more%20information%20on%20events%2C%20call%20505-248-8514.%20Visit%20the%20city%27s%20%3Ca%20href%3D%22https%3A%2F%2Fwww.cabq.gov%2Fculturalservices%2Fbiopark%2Ftingley%2Ffishing%2Fweekly-fishing-report%22%3EWeekly%20Fishing%20Report%3C%2Fa%3E%20for%20information%20on%20fishing.","lighting":"None","difficulty":1,"surface":"5-foot
+        wide pavement","parking":"ADA accessible, ample parking on site","facilities":"Restrooms,
+        bike racks","hours":"Dawn to dusk","loopcount":3,"satImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450551278tingleyBeachSat.png","largeImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450551300tingly.jpg","thumbURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/square_1450551300tingly.jpg","attractions":["paddle%20boat%20rentals","Model%20boat%20sailing","Bird%20watching","Fishing%20-%20Train%20station%20sells%20bait","Seasonal%20gift%20shop%2C%20snack%20bar%2C%20and%20cafe"],"loops":{"1":{"name":"North
+        Loop","distance":"0.16","steps":338},"2":{"name":"Central Pond and Children''s
+        Pond","distance":"0.17","steps":359},"3":{"name":"Large Central and South
+        Ponds Connect","distance":"0.6","steps":1267}},"published":"true","rating":4,"ratings":2,"favorites":5,"ModifiedTime":"2021-02-12
+        03:55:11","reviews":0,"url":"https:\/\/prescriptiontrails.org\/trail\/2\/tingley-beach\/"},{"id":3,"name":"Tiguex
+        Park","city":"Albuquerque","zip":87104,"crossstreets":"Mountain & Rio Grande
+        NW","address":"1800 Mountain Rd NW","transit":"ABQ Ride Stops:  #36, bus stop
+        on Rio Grande & Mountain - 235 steps to park","lat":"35.0967569","lng":"-106.66616","desc":"Walk%20two%20loop%20paths%20at%20Tiguex%20Park%2C%20starting%20at%2019th%20Street.%20The%20outer%20loop%20and%20inner%20loop%20connect%20at%20several%20points%2C%20adding%20variety.%20The%20park%20is%20visible%20from%20the%20street%2C%20and%20many%20people%20visit%20it.","lighting":"None","difficulty":1,"surface":"8-foot
+        wide concrete","parking":"On street","facilities":"Picnic tables","hours":"6
+        a.m. - 10 p.m.","loopcount":2,"satImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450551913tiguex-park.png","largeImgURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/1450551924tiguex.jpg","thumbURL":"https:\/\/prescriptiontrails.org\/admin\/new\/images\/square_1450551924tiguex.jpg","attractions":["Nearby%3A%20%3Ca%20href%3D%22http%3A%2F%2Fwww.nmnaturalhistory.org%2F%22%3ENew%20Mexico%20Museum%20of%20Natural%20History%20and%20Science%3C%2Fa%3E","Nearby%3A%20%3Ca%20href%3D%22http%3A%2F%2Fwww.explora.us%2F%22%3EExplora%3C%2Fa%3E","Nearby%3A%20%3Ca%20href%3D%22http%3A%2F%2Fwww.cabq.gov%2Fculturalservices%2Falbuquerque-museum%22%3EAlbuquerque%20Museum%20of%20Art%20and%20History%3C%2Fa%3E","Exercise%20stations%3A%20outdoor%20fitness%20equipment%20located%20along%20walking%20trail","Basketball%20courts","Play%20areas"],"loops":{"1":{"name":"Inner
+        Loop","distance":"0.3","steps":634},"2":{"name":"Outer Loop","distance":"0.5","steps":1056}},"published":"true","rating":4,"ratings":2,"favorites":6,"ModifiedTime":"2021-02-12
+        03:55:48","reviews":0,"url":"https:\/\/prescriptiontrails.org\/trail\/3\/tiguex-park\/"}],"countReturned":3,"totalMatched":53}'
+  recorded_at: Tue, 09 Mar 2021 16:56:50 GMT
+recorded_with: VCR 6.0.0
