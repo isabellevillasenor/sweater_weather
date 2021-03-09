@@ -21,4 +21,12 @@ describe 'Images Controller' do
       expect(result[:data][:attributes][:image][:credit]).to have_key(:logo)
     end
   end
+
+  it 'sends an error message if unable to find image/location' do
+    VCR.use_cassette('background_image') do
+      get '/api/v1/backgrounds?location='
+
+      expect(response.status).to eq(404)
+    end
+  end
 end
