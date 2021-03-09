@@ -1,8 +1,10 @@
 class BackgroundImage
-  attr_reader :location,
+  attr_reader :id,
+              :location,
               :image_url,
               :credit
   def initialize(data, location)
+    @id = nil
     @location = location
     @image_url = data[:urls][:full]
     @credit = create_credit(data)

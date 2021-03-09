@@ -7,6 +7,7 @@ describe BackgroundImage do
 
     background_image = BackgroundImage.new(response[:results][0], 'denver,co')
 
+    expect(background_image.id).to be_nil
     expect(background_image.location).to eq('denver,co')
     expect(background_image.image_url).to eq('https://images.unsplash.com/photo-1599408169542-620fc453382c?crop=entropy&cs=srgb&fm=jpg&ixid=MnwyMTMwNjJ8MHwxfHNlYXJjaHwxfHxkZW52ZXJ8ZW58MHx8fHwxNjE1MjUyMTcw&ixlib=rb-1.2.1&q=85')
 
