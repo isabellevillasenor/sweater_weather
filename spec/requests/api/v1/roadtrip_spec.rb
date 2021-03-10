@@ -26,8 +26,8 @@ describe 'RoadTrip Controller' do
       expect(result[:data][:attributes][:end_city]).to eq('Pueblo,Co')
       expect(result[:data][:attributes][:travel_time]).to eq('01:44:22')
       expect(result[:data][:attributes][:weather_at_eta].count).to eq(2)
-      expect(result[:data][:attributes][:weather_at_eta][:temperature]).to eq(53.2)
-      expect(result[:data][:attributes][:weather_at_eta][:conditions]).to eq('clear sky')
+      expect(result[:data][:attributes][:weather_at_eta][:temperature]).to eq(48.3)
+      expect(result[:data][:attributes][:weather_at_eta][:conditions]).to eq('scattered clouds')
     end
   end
 

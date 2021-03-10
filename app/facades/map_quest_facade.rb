@@ -8,11 +8,17 @@ class MapQuestFacade
     def road_trip(location_params)
       json = MapQuestService.road_trip(location_params)
 
-      weather = self.destination_weather(location_params[:destination])
-      arrival_time = (Time.now + (json[:route][:realTime]))
-      arrival_weather = self.hourly_destination_weather(arrival_time, weather)
-
-      road_trip = RoadTrip.new(json, location_params[:origin], location_params[:destination], arrival_weather)
+      if json[:route][:routeError][:errorCode] == 2
+        weather_at_eta = {}
+        
+        road_trip = RoadTrip.new(json, location_params[:origin], location_params[:destination], weather_at_eta)
+      else
+        weather = self.destination_weather(location_params[:destination])
+        arrival_time = (Time.now + (json[:route][:realTime]))
+        arrival_weather = self.hourly_destination_weather(arrival_time, weather)
+        
+        road_trip = RoadTrip.new(json, location_params[:origin], location_params[:destination], arrival_weather)
+      end
     end
     
     def destination_weather(location)
