@@ -30,17 +30,19 @@ describe MapQuestFacade do
         expect(response.start_city).to eq('Denver,Co')
         expect(response.end_city).to eq('Pueblo,Co')
         expect(response.travel_time).to eq('01:44:22')
-        expect(response.weather_at_eta[:temperature]).to eq(53.8)
+        expect(response.weather_at_eta[:temperature]).to eq(53.0)
         expect(response.weather_at_eta[:conditions]).to eq('clear sky')
       end
     end
 
     it '.find_time' do
-      time = MapQuestFacade.find_time(Time.now).strftime('%H:%M:%S')
-      expect(time).to eq('19:00:00')
+      set_time = Time.parse('2021-03-09 20:19:39 -0700')
+      time = MapQuestFacade.find_time(set_time).strftime('%H:%M:%S')
+      expect(time).to eq('20:00:00')
 
-      else_time = MapQuestFacade.find_time(Time.now + 30*60).strftime('%H:%M:%S')
-      expect(else_time).to eq('20:00:00')
+      set_else_time = Time.parse('2021-03-09 21:19:39 -0700')
+      else_time = MapQuestFacade.find_time(set_else_time + 30*60).strftime('%H:%M:%S')
+      expect(else_time).to eq('22:00:00')
     end
   end
 end
