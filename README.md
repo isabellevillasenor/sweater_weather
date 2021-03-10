@@ -13,6 +13,9 @@ Your backend is building an application to plan road trips. This app will allow 
 * Determine completion criteria based on the needs of other developers
 * Research, select, and consume an API based on your needs as a developer
 
+## Users Table
+<img src="https://i.ibb.co/frvvvKz/users-table.png" alt="users-table">
+
 ## Setup
 
 * Clone down the repo to your local machine
@@ -33,10 +36,15 @@ MAPQUEST_API_KEY: "insert_your_key_here"
 OPEN_WEATHER_API_KEY: "insert_your_key_here"
 ```
 
+### [Unsplash](https://unsplash.com/developers)
+```
+UNSPLASH_API_KEY: "insert_your_key_here"
+```
+
 ## See Endpoints Locally
 
 Run `rails s` to start the local server. Using any API platform, such as [Postman](https://www.postman.com/downloads/), run the desired endpoint with the base URL of `http://localhost:300/api/v1/#{desired_endpoint}`. Make sure to include your API based off the developer documentation per each key. 
 
 ## Testing
 
-Sweater Weather is tested with RSpec. To run the test suite, run `bundle exec rspec`
+Sweater Weather is tested with RSpec at 100% Coverage Results. To run the test suite, run `bundle exec rspec`. To open SimpleCov, run `open coverage/index.html` 
