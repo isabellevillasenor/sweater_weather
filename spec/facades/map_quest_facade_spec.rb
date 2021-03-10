@@ -19,6 +19,7 @@ describe MapQuestFacade do
 
     it '.road_trip' do
       VCR.use_cassette('facade_map_2') do
+
         params = {
           origin: 'Denver,Co',
           destination: 'Pueblo,Co'
@@ -29,9 +30,10 @@ describe MapQuestFacade do
         expect(response).to be_a RoadTrip
         expect(response.start_city).to eq('Denver,Co')
         expect(response.end_city).to eq('Pueblo,Co')
-        expect(response.travel_time).to eq('01:44:22')
-        expect(response.weather_at_eta[:temperature]).to eq(48.3)
-        expect(response.weather_at_eta[:conditions]).to eq('scattered clouds')
+        expect(response.travel_time).to be_a String
+        expect(response.weather_at_eta).to be_a Hash
+        expect(response.weather_at_eta[:temperature]).to be_a Float
+        expect(response.weather_at_eta[:conditions]).to be_a String
       end
     end
       
