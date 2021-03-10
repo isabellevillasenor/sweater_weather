@@ -79,4 +79,5 @@ end
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
+  config.default_cassette_options = { re_record_interval: 7.days }
 end
