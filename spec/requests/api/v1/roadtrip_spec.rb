@@ -24,10 +24,14 @@ describe 'RoadTrip Controller' do
       expect(result[:data][:attributes].count).to eq(4)
       expect(result[:data][:attributes][:start_city]).to eq('Denver,Co')
       expect(result[:data][:attributes][:end_city]).to eq('Pueblo,Co')
-      expect(result[:data][:attributes][:travel_time]).to eq('01:44:22')
+      expect(result[:data][:attributes]).to have_key(:travel_time)
+      expect(result[:data][:attributes][:travel_time]).to be_a String
+      expect(result[:data][:attributes][:weather_at_eta]).to be_a Hash
       expect(result[:data][:attributes][:weather_at_eta].count).to eq(2)
-      expect(result[:data][:attributes][:weather_at_eta][:temperature]).to eq(48.3)
-      expect(result[:data][:attributes][:weather_at_eta][:conditions]).to eq('scattered clouds')
+      expect(result[:data][:attributes][:weather_at_eta]).to have_key(:temperature)
+      expect(result[:data][:attributes][:weather_at_eta][:temperature]).to be_a Float
+      expect(result[:data][:attributes][:weather_at_eta]).to have_key(:conditions)
+      expect(result[:data][:attributes][:weather_at_eta][:conditions]).to be_a String
     end
   end
 
