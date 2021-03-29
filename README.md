@@ -1,4 +1,5 @@
 # Sweater Weather
+<img src="https://img.shields.io/badge/RUBY-2.5.3-957DAD?style=for-the-badge"> <img src="https://img.shields.io/badge/RAILS-5.2.4-957DAD?style=for-the-badge"> <img src="https://img.shields.io/badge/coverage-100%25-brightgreen?style=for-the-badge"> 
 
 Sweater Weather is the final solo project for [Turing School of Software and Design](https://turing.io/) Backend Mod 3 Students. Students had a 5 day deadline to complete all functionality.
 
@@ -47,4 +48,4 @@ Run `rails s` to start the local server. Using any API platform, such as [Postma
 
 ## Testing
 
-Sweater Weather is tested with RSpec at 100% Coverage Results. To run the test suite, run `bundle exec rspec`. To open SimpleCov, run `open coverage/index.html` 
+Sweater Weather is tested with RSpec at 100% Coverage Results via SimpleCov. To run the test suite, run `bundle exec rspec`. To open SimpleCov, run `open coverage/index.html` 
